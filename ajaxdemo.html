@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script>
+        var getdata=()=>{
+    var xhr=new XMLHttpRequest();
+    xhr.open("get","http://localhost:3000/")
+ xhr.send()  
+
+ xhr.onreadystatechange=function(){
+    if(xhr.status==200&& xhr.readyState==4){
+        var arr =JSON.parse(xhr.response)
+        var str="";
+    //     for(obj of arr){
+    //         str+=obj.id+ " "
+    //     }
+        document.getElementById("d1").innerHTML=arr;
+    }
+ }
+}
+    </script>
+</head>
+<body>
+
+    <input type="button" value="getdata" onclick="getdata()">
+<div id="d1" ></div>
+</body>
+</html>

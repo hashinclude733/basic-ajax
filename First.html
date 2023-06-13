@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+        function f1(){
+           var num1=  parseInt(  document.getElementById("START").value);
+           var num2=   parseInt( document.getElementById("END").value);
+           var num3=   parseInt( document.getElementById("MULTIPLY").value);
+           
+         for(var i=num1;i<=num2;i++)
+          {
+
+            var res=i*num3;
+          
+            document.getElementById("res").innerHTML+=(i+"times"+num3+"="+ (res) + "<br/>");
+          }
+          
+          
+            }  
+
+        
+        </script>
+    </head>
+    <body>
+        <h1>welcome</h1>
+       <form>
+      START NUM:  <input type="text" id="START">
+
+ END NUM<input type="text" id="END">
+ MULTIPLY BY<input type="text" id="MULTIPLY">
+        <input type="button" value="TIMES TABLE" onclick="f1()">
+        <input type="button" value="RESET" >
+        <div id="res"></div>
+       </form>
+        
+    </body>
+</html>
